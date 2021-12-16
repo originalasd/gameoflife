@@ -12,10 +12,18 @@ class tile():
         else:
             if surroundings == 3:
                 self.isAlive = True
+    def toggle(self):
+        self.isAlive = not self.isAlive 
+            
+
 class map:
     mappedTiles = None
     def __init__(self) -> None:
-        pass
+        self.mappedTiles = []
+        for column in range(20):
+            self.mappedTiles.append([])
+            for rows in range(20):
+                self.mappedTiles[column].append(tile())
     def draw():
         pass
     def update():
